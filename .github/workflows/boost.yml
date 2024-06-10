@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{fromJSON(github.event.inputs.scan_params).repository}}
           token: ${{fromJSON(github.event.inputs.scan_params).token}}
@@ -28,7 +28,8 @@ jobs:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: ${{fromJSON(github.event.inputs.scan_params).registry_module}}
           scan_timeout: ${{ vars.BOOST_DIFF_SCAN_TIMEOUT }}
-          api_endpoint: https://api.dev.boostsec.io
+          scan_label: ${{fromJSON(github.event.inputs.scan_params).scan_label}}
+          scan_path: ${{fromJSON(github.event.inputs.scan_params).scan_path}}
         env:
           BOOST_GIT_HEAD: ${{fromJSON(github.event.inputs.scan_params).head_sha}}
           BOOST_GIT_BASE: ${{fromJSON(github.event.inputs.scan_params).base_sha}}
@@ -43,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{fromJSON(github.event.inputs.scan_params).repository}}
           token: ${{fromJSON(github.event.inputs.scan_params).token}}
@@ -54,7 +55,8 @@ jobs:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: ${{fromJSON(github.event.inputs.scan_params).registry_module}}
           scan_timeout: ${{ vars.BOOST_DIFF_SCAN_TIMEOUT }}
-          api_endpoint: https://api.dev.boostsec.io
+          scan_label: ${{fromJSON(github.event.inputs.scan_params).scan_label}}
+          scan_path: ${{fromJSON(github.event.inputs.scan_params).scan_path}}
         env:
           BOOST_GIT_HEAD: ${{fromJSON(github.event.inputs.scan_params).head_sha}}
           BOOST_GIT_BASE: ${{fromJSON(github.event.inputs.scan_params).base_sha}}
@@ -72,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{fromJSON(github.event.inputs.scan_params).repository}}
           token: ${{fromJSON(github.event.inputs.scan_params).token}}
@@ -83,7 +85,8 @@ jobs:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: ${{fromJSON(github.event.inputs.scan_params).registry_module}}
           scan_timeout: ${{ vars.BOOST_DIFF_SCAN_TIMEOUT }}
-          api_endpoint: https://api.dev.boostsec.io
+          scan_label: ${{fromJSON(github.event.inputs.scan_params).scan_label}}
+          scan_path: ${{fromJSON(github.event.inputs.scan_params).scan_path}}
         env:
           BOOST_GIT_HEAD: ${{fromJSON(github.event.inputs.scan_params).head_sha}}
           BOOST_GIT_BASE: ${{fromJSON(github.event.inputs.scan_params).base_sha}}
@@ -99,7 +102,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{fromJSON(github.event.inputs.scan_params).repository}}
           token: ${{fromJSON(github.event.inputs.scan_params).token}}
@@ -110,7 +113,8 @@ jobs:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: ${{fromJSON(github.event.inputs.scan_params).registry_module}}
           scan_timeout: ${{ vars.BOOST_DIFF_SCAN_TIMEOUT }}
-          api_endpoint: https://api.dev.boostsec.io
+          scan_label: ${{fromJSON(github.event.inputs.scan_params).scan_label}}
+          scan_path: ${{fromJSON(github.event.inputs.scan_params).scan_path}}
         env:
           BOOST_GIT_HEAD: ${{fromJSON(github.event.inputs.scan_params).head_sha}}
           BOOST_GIT_BASE: ${{fromJSON(github.event.inputs.scan_params).base_sha}}
@@ -127,7 +131,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{fromJSON(github.event.inputs.scan_params).repository}}
           token: ${{fromJSON(github.event.inputs.scan_params).token}}
@@ -138,7 +142,8 @@ jobs:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: ${{fromJSON(github.event.inputs.scan_params).registry_module}}
           scan_timeout: ${{ vars.BOOST_DIFF_SCAN_TIMEOUT }}
-          api_endpoint: https://api.dev.boostsec.io
+          scan_label: ${{fromJSON(github.event.inputs.scan_params).scan_label}}
+          scan_path: ${{fromJSON(github.event.inputs.scan_params).scan_path}}
         env:
           BOOST_GIT_HEAD: ${{fromJSON(github.event.inputs.scan_params).head_sha}}
           BOOST_GIT_BASE: ${{fromJSON(github.event.inputs.scan_params).base_sha}}
